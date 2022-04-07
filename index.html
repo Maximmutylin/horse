@@ -9,16 +9,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="mask">
+        <div class="loader"></div> <br>
+        <div class="preloadtittle">Пожалуйста подождите, идет загрузка</div>
+    </div>
+
     <header class="header">
         <nav class="menu">
             <div class="menu__close" id="menu__close">
                 &#10006
             </div>
             <ul class="menu__list" id="menu__list">
-                <li class="menu__paragraff">О НАС</li>
-                <li class="menu__paragraff">УСЛУГИ И ЦЕНЫ</li>
-                <li class="menu__paragraff">ФОТОАЛЬБОМ</li>
-                <li class="menu__paragraff">КОНТАКТЫ</li>     
+                <li class="menu__paragraff"><a href="#about">О НАС</a></li>
+                <li class="menu__paragraff"><a href="">УСЛУГИ И ЦЕНЫ</a></li>
+                <li class="menu__paragraff"><a href="#visitor">ФОТОАЛЬБОМ</a></li>
+                <li class="menu__paragraff"><a href="#contactss">КОНТАКТЫ</a></li>     
             </ul>
         </nav>
         <div class="header__top">
@@ -26,10 +32,10 @@
             <img class="header__logo768px" src="img/768px/Ресурс 1 1.svg" alt="">
             <img class="header__logo1000px" src="img/1000px/Ресурс 1 1.png" alt="">
             <div class="menu__list768px">
-                <span>О НАС</span>
-                <span>УСЛУГИ И ЦЕНЫ</span>
-                <span>ФОТОАЛЬБОМ</span>
-                <span>КОНТАКТЫ</span>   
+                <span><a href="#about">О НАС</a></span>
+                <span><a href="">УСЛУГИ И ЦЕНЫ</a></span>
+                <span><a href="#visitor">ФОТОАЛЬБОМ</a></span>
+                <span><a href="#contactss">КОНТАКТЫ</a></span>   
             </div>
             <div class="header__menu">
                 Меню
@@ -68,7 +74,8 @@
         <img class="header__hourse-small768px" src="img/768px/Лошать маленькая 1.svg" alt="">
     </header>
     <main>
-        <section class="about">
+        
+        <section class="about" id="about">
             <h2 class="about__title">О нашем клубе</h2>
         <div class="horsejumpcontainer">
             <div class="horsejump">
@@ -207,7 +214,7 @@
             </div>
         </div>
         </section>
-        <section class="visitor">
+        <section class="visitor" id="visitor">
             <div class="visitor__title">Наши посетители</div> 
             <section>
                 <div class="slider123">
@@ -228,31 +235,31 @@
             <div class="horse__title">Наши лошади</div>
                 <div class="horse__slaider-line">
                     <div class="horse__item">
-                        <img class="horse__photo" src="img/Нашилошади/unsplash_9h_bJdGqzCk.svg" alt="">
+                        <img class="horse__photo" width="250px" src="img/Нашилошади/unsplash_9h_bJdGqzCk.svg" alt="">
                         <div class="horse__name">Юджин</div>
                         <div class="horse__dash"></div>
                         <div class="horse__text">Уроки профессиональной верховой езды для любителей и начинающих</div>
                     </div>
                     <div class="horse__item">
-                        <img class="horse__photo" src="img/Нашилошади/unsplash_9h_bJdGqzCk (1).svg" alt="">
+                        <img class="horse__photo"  width="250px" src="img/Нашилошади/unsplash_9h_bJdGqzCk (1).svg" alt="">
                         <div class="horse__name">Мелисса</div>
                         <div class="horse__dash"></div>
                         <div class="horse__text">Уроки профессиональной верховой езды для любителей и начинающих</div>
                     </div>
                     <div class="horse__item">
-                        <img class="horse__photo" src="img/Нашилошади/unsplash_9h_bJdGqzCk (2).svg" alt="">
+                        <img class="horse__photo"  width="250px" src="img/Нашилошади/unsplash_9h_bJdGqzCk (2).svg" alt="">
                         <div class="horse__name">Циан</div>
                         <div class="horse__dash"></div>
                         <div class="horse__text">Уроки профессиональной верховой езды для любителей и начинающих</div>
                     </div>
                     <div class="horse__item">
-                        <img class="horse__photo" src="img/Нашилошади/unsplash_9h_bJdGqzCk (3).svg" alt="">
+                        <img class="horse__photo"  width="250px" src="img/Нашилошади/unsplash_9h_bJdGqzCk (3).svg" alt="">
                         <div class="horse__name">Хесана</div>
                         <div class="horse__dash"></div>
                         <div class="horse__text">Уроки профессиональной верховой езды для любителей и начинающих</div>
                     </div>
                     <div class="horse__item">
-                        <img class="horse__photo" src="img/Нашилошади/unsplash_9h_bJdGqzCk (4).svg" alt="">
+                        <img class="horse__photo"  width="250px" src="img/Нашилошади/unsplash_9h_bJdGqzCk (4).svg" alt="">
                         <div class="horse__name">Жазель</div>
                         <div class="horse__dash"></div>
                         <div class="horse__text">Уроки профессиональной верховой езды для любителей и начинающих</div>
@@ -270,13 +277,13 @@
                     Мы ответим на все ваши вопросы по телефону, или вы можете записаться
                     на <span class="form__subtitle-modification"> бесплатное  </span> пробное занятие
                 </h4>
-                <form action="#" method="post">
-                    <input class="form__text"  type="text" name="your name" id="1" placeholder="Ваше имя" title="Введите текст " required pattern="[a-яА-Яa-zA-Z\s]+$">
-                    <input class="form__tel" type="text" name="number phone" id="2" placeholder="Номер телефона" title="Номер телефона должен состоять из 11 цифр начиная с 7, без +" pattern="[0-9]{11,11}"  required>
+                <form action="#" method="post" >
+                    <input class="form__text"  type="text" name="name" id="1" placeholder="Ваше имя" title="Введите текст " required pattern="[a-яА-Яa-zA-Z\s]+$">
+                    <input class="form__tel" type="text" name="phone" id="2" placeholder="Номер телефона" title="Номер телефона должен состоять из 11 цифр начиная с 7, без +" pattern="[0-9]{11,11}"  required>
                     <button class="form__button">Задать вопрос</button>
                     <div class="form__checkbox">
                         <input type="checkbox" name="date" id="3" value="true" required>
-                        <span>Даю согласие на обработку данных</span>
+                        <label>Даю согласие на обработку данных</label>
                     </div> 
                 </form>
             </div>
@@ -347,3 +354,6 @@
 <script src="Js/script.js"></script>
 </body>
 </html>
+
+
+

@@ -54,12 +54,17 @@ button::-moz-focus-inner {
 
 a, a:visited {
   text-decoration: none;
+  color: inherit;
 }
 
 a:hover {
   text-decoration: none;
+  
 }
-
+a:active {
+  text-decoration: none;
+  
+}
 ul li {
   list-style: none;
 }
@@ -73,6 +78,45 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
 }
 
+.mask {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  transition: 0.6s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loader {
+  width: 100px;
+  height: 100px;
+  border: 8px solid rgba(49, 6, 49, 0.6);
+  border-radius: 50%;
+  border-left-color:rgb(32, 4, 20) ;
+  animation: loader 1s infinite linear;
+}
+@keyframes loader {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hide{
+  opacity: 0;
+}
+
+.preloadtittle {
+  padding: 20px;
+  text-align: center;
+  font-size: 2em;
+  line-height: 26px;
+  color: white;
+}
+
 .header {
   background-image: url("../img/1-экран/bg_1.png");
   background-position: center;
@@ -81,6 +125,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   height: 578px;
 }
+
 
 .header .header__logo1000px {
   display: none;
@@ -318,9 +363,13 @@ h1, h2, h3, h4, h5, h6 {
   .menu #menu__list {
     width: 230px;
   }
+  .menu{
+    position: relative;
+  }
   .menu #menu__close {
-    position: absolute;
+    position: fixed;
     left: 196px;
+    top:20px;
   }
   .header__top {
     display: -webkit-box;
@@ -1126,6 +1175,7 @@ h1, h2, h3, h4, h5, h6 {
   background-size: cover;
   background-position: bottom;
   text-align: center;
+  padding-bottom: 10px;
 }
 
 .directions__title {
@@ -1212,15 +1262,23 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (min-width: 768px) {
+.directions {
+  width: 105% ;
+}
+}
+
 @media (min-width: 1000px) {
+  .directions {
+    width: 100% ;
+  }
   .directions__title {
     font-size: 30px;
   }
   .directions__grid {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-    padding: 0;
-    margin: 0 100px !important;
+    
   }
   .directions .club {
     margin: 0 0 54px 30px;
@@ -1393,7 +1451,7 @@ h1, h2, h3, h4, h5, h6 {
           box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.03);
   border-radius: 5px;
   margin: 30px 10px 0;
-  padding: 0 0 20px 0;
+  padding: 0 0px 20px;
 }
 
 .horse .horse__photo {
@@ -1690,7 +1748,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 28px;
 }
 
-.questions .form__checkbox span {
+.questions .form__checkbox label {
   font-family: Roboto;
   padding-left: 12px;
   font-size: 13px;
@@ -2146,6 +2204,7 @@ h1, h2, h3, h4, h5, h6 {
   .contacts {
     position: relative;
     height: 650px !important;
+    padding:50px 0 0 0;
   }
   .cutaway {
     width: 500px;
@@ -2379,6 +2438,7 @@ h1, h2, h3, h4, h5, h6 {
   .footer__politics {
     font-size: 12px;
   }
+  
 }
 
 @media (min-width: 1920px) {

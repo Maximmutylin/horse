@@ -1,19 +1,35 @@
 'use strict'
 
+let mask = document.querySelector('.mask');
+
+window.addEventListener('load', function() {
+    mask.classList.add('hide');
+    setTimeout(() => {
+        mask.remove() 
+    }, 1000);
+})
+ 
+
 //Меню
 const menu = document.querySelector('.header__menu');
 const fullMenu = document.querySelector('.menu');
 const closeMenu = document.querySelector('.menu__close');
-
+const links = document.querySelectorAll('a');
 
 menu.addEventListener('click', function(){
     fullMenu.setAttribute('style', 'display: block;')
 })
 
-
 closeMenu.addEventListener('click', function(){
     fullMenu.setAttribute('style', 'display: none;')
 })
+
+links.forEach(e => {
+    e.addEventListener('click', function() {
+        fullMenu.setAttribute('style', 'display: none;');
+    })
+})
+
 
 //Слайдер 1
 $('.slider123').slick({
@@ -56,8 +72,6 @@ $('.slider123').slick({
     ]
 });
 
-
-
 //Слайдер 2
 $('.horse__slaider-line').slick({
     dots: true,
@@ -82,27 +96,4 @@ $('.horse__slaider-line').slick({
         },
     ]
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
